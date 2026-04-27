@@ -6,24 +6,28 @@ A lightweight Node.js/Express REST API with an automated CI/CD pipeline using **
 
 ## Live Application
 
-> **[https://cicd-demo-app.onrender.com](https://cicd-demo-app.onrender.com)**
+> **https://ci-cd-app-7z2h.onrender.com/api/health**
 
 ---
 
 ## Screenshots
 
 ### Hosted Application
-![App running on Render](docs/screenshots/app-live.png)
-*The live app served from Render's free tier, showing the health badge confirming the deployed version.*
+<img width="582" height="140" alt="image" src="https://github.com/user-attachments/assets/e0f99f29-2b61-4f4b-9a36-3404c73822f9" />
+
 
 ### Successful GitHub Actions Run
-![GitHub Actions passing](docs/screenshots/actions-passing.png)
+<img width="1022" height="482" alt="image" src="https://github.com/user-attachments/assets/ad66c1cc-f692-45ad-a9ec-5ceba8f206b6" />
+
 *CI stage runs tests on Node 18 and 20 in parallel. CD stage triggers only after both matrix jobs pass.*
 
 ### Blocked Deployment (Failing Tests)
-![GitHub Actions blocked](docs/screenshots/actions-blocked.png)
+<img width="1002" height="762" alt="image" src="https://github.com/user-attachments/assets/06638d53-7167-4c5f-813f-795784d8aa3b" />
+
 *When tests fail, the deploy job is skipped. Broken code never reaches production.*
 
+### Test Scenario
+I changed HTTP return status from ok to OK,thats why test failed and it never deployed to render,then i adjusted my test cases pushed again and it deployed,thus proving effectivnes of this CI/CD project.
 ---
 
 ## Pipeline Description
